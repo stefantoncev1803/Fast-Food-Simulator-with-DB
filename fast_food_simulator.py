@@ -145,25 +145,29 @@ while True:
              Welcome to fast food Stefy
              ==========================
              Please choose an option:
-             1. Add product
-             2. Add quantity
-             3. Delete product
-             4. Place order
-             5. Exit
+             1. Show avaialble products
+             2. Add product
+             3. Add quantity
+             4. Delete product
+             5. Place order
+             6. Exit
 
             ''')
-    choose_option = input("Please choose option 1,2,3,4 or 5 : ")
-    if choose_option == "5":
+    choose_option = input("Please choose option 1,2,3,4,5 or 6 : ")
+    if choose_option == "6":
         print("Goodbye!")
         mydb.close()
         break
     elif choose_option == "1":
-        add_product()
+        print("Avaialble products: ")
+        show_products()
     elif choose_option == "2":
-        add_quantity()
+        add_product()
     elif choose_option == "3":
-        delete_product()
+        add_quantity()
     elif choose_option == "4":
+        delete_product()
+    elif choose_option == "5":
         place_order()
     else:
         print("Invalid option, please try again...")
